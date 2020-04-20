@@ -1,0 +1,40 @@
+package homework5;
+
+import javax.swing.JOptionPane;
+
+
+    public class CompanySales {
+        public static void main(String[] args) {
+            
+                     
+            int    data,ID,HourlyRate,Hoursworked;
+            int i;
+            for (i = 0; i < 4; i++) {
+                          
+                    String dataString = JOptionPane.showInputDialog("Enter Account # :");
+                     data = Integer.parseInt(dataString);
+                    
+                    String dataStringID = JOptionPane.showInputDialog("Enter ID:");
+                     ID = Integer.parseInt(dataStringID);
+                    
+                    String dataStringRate = JOptionPane.showInputDialog("Enter Hourly Rate:");
+                    HourlyRate = Integer.parseInt(dataStringRate);
+                    
+                    String dataStringHours = JOptionPane.showInputDialog("Enter Hours:");
+                    Hoursworked = Integer.parseInt(dataStringHours);
+                    
+                 
+                
+        Account[] accounts = new Account[5];
+        accounts[data] = new Supplies(ID,HourlyRate,Hoursworked);
+        accounts[data] = new Services(ID,HourlyRate,Hoursworked);
+   
+                     
+
+        JOptionPane.showInputDialog(accounts[data]);
+      
+        
+         }
+        
+    }
+}
